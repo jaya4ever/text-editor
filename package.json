@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "## Your Task",
   "main": "server.js",
- 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
@@ -33,5 +32,3 @@
   },
   "homepage": "https://github.com/jaya4ever/text-editor#readme"
 }
-
-
