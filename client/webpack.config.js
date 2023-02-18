@@ -18,7 +18,25 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Text Editor',
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+      new WebpackPwaManifest({
+        name: 'Text Editor',
+        publicPath: '/',
+        start_url: '/',
+        fingerprints: false,
+        icons: [{
+          src:  path.resolve('./src/images/logo.png'),
+          destination: path.join('assets', 'icons'),
+          sizes: [96, 128, 192, 256, 384, 512]
+        },]
+      })
     ],
 
     module: {
