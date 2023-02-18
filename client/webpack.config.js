@@ -51,7 +51,7 @@ module.exports = () => {
           exclude: /node_modules/,
           use:{
             loader: 'babel-loader',
-            optioons:{
+            options:{
               presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
