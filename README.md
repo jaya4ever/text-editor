@@ -1,14 +1,17 @@
-# 19 Progressive Web Applications (PWA): Text Editor
+# PWA Just Another Text- Editor
 
-## Your Task
+## Description
+ ### J.A.T.E was created as a simple text editor app that can function both online and offline, with a variety of data persistence options in order to ensure that data is not lost in any scenario. The application first looks to use the data in the indexedDB to populate the editor, then if it cannot access that it will use local storage. For use offline, this application can be downloaded to your desktop as an application. The application is a web text editor where the user can create notes or code snippets with or without an internet connection and where the user can reliably retrieve them for later use. The integrated service worker and Cache API's ensure that the application will remain fully functional even without and active internet connection. This application allows the user to access visited pages even if the application is offline.
 
-As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
 
-Your task is to build a text editor that runs in the browser. The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+ ### This is my GitHub Repository 
+ [GitHub](https://github.com/jaya4ever/text-editor)
 
-To build this text editor, you will start with an existing application and implement methods for getting and storing data to an IndexedDB database. You will use a package called `idb`, which is a lightweight wrapper around the IndexedDB API. It features a number of methods that are useful for storing and retrieving data, and is used by companies like Google and Mozilla.
+### This is my link to Heroku
+[Heroku](https://hidden-castle-72719.herokuapp.com/ "Heroku app")
 
-You will deploy this full-stack application to Heroku using the [Heroku Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide).
+
+
 
 ## User Story
 
@@ -48,95 +51,17 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 ```
 
-## Mock-Up
+### Installation 
+* npm install express (express.js)
+* npm install webpack-dev-server --save-dev (webpack-dev-server)
+* npm install --save-dev webpack-pwa-manifest (WebpackPwaManifest)
+* npm install babel (Babel)
+* npm install --save-dev css-loader (CSS-loader)
+* npm install --save-dev webpack (Webpack)
+* npm install concurrently --save (run multiple commands concurrently.) (Concurrently)
+* npm npm install idb (IndexedDB)
 
-The following animation demonstrates the application functionality:
 
-![Demonstration of the finished Module 19 Challenge being used in the browser and then installed.](./Assets/00-demo.gif)
+## License
 
-The following image shows the application's `manifest.json` file:
-
-![Demonstration of the finished Module 19 Challenge with a manifest file in the browser.](./Assets/01-manifest.png)
-
-The following image shows the application's registered service worker:
-
-![Demonstration of the finished Module 19 Challenge with a registered service worker in the browser.](./Assets/02-service-worker.png)
-
-The following image shows the application's IndexedDB storage:
-
-![Demonstration of the finished Module 19 Challenge with a IndexedDB storage named 'jate' in the browser.](./Assets/03-idb-storage.png)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses IndexedDB to create an object store and includes both GET and PUT methods
-
-  * The application works without an internet connection
-
-  * Automatically saves content inside the text editor when the DOM window is unfocused
-
-  * Bundled with webpack
-
-  * Create a service worker with workbox that Caches static assets
-
-  * The application should use babel in order to use async / await
-
-  * Application must have a generated `manifest.json` using the `WebpackPwaManifest` plug-in
-
-  * Can be installed as a Progressive Web Application
-
-### Deployment: 32%
-
-* Application deployed to Heroku at live URL with build scripts
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+  Copyright (c) 2023 [GitHub](https://github.com/jaya4ever)  **Note** This application is under the [MIT](https://MIT-license.org)
