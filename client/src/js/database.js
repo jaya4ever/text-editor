@@ -12,36 +12,23 @@ const initdb = async () =>
     },
   });
 
-  export const getDb = async (value) => {
-    console.log('Getting data from the jateDB');
-    // connect to DB and version we want to use
-    const jateDb = await openDB('jate', 1);
-    // make new transaction...need to specify the DB we are posting to and the data privileges. 
-    const tx = jateDb.transaction('jate', 'readwrite');
-    // open the object store
-    const objStore = tx.objectStore('jate');
-    // use the .getAll() method to grab all the content in the DB
-    const req = objStore.getAll()
-    // confirm the data was fetched
-    const res = await req;
-    console.log('data saved to the jateDB', res);
+  export const putDb = async (content) => {
+    const jateDB = await openDB("jate", 1);
+    const tx = jateDB.transaction("jate", "readwrite");
+    const store = tx.objectStore("jate");
+    const request = store.put({ jate: content });
+    const result = await request;
+    console.log("Data saved to the database", result);
   };
   
-  // PUT function
-  export const putDb = async (id, value) => {
-    console.log('PUT request to update the jateDB');
-    // connect to DB and version we want to use
-    const jateDb = await openDB('jate', 1);
-    // make new transaction...need to specify the DB we are posting to and the data privileges. 
-    const tx = jateDb.transaction('jate', 'readwrite');
-    // open the object store
-    const objStore = tx.objectStore('jate');
-    // use the .add() method to pass in content
-    const req = objStore.put({ id: id, value: value })
-    // confirm the data was added
-    const res = await req;
-    console.log('data saved to the jateDB', res);
+  // TODO: Add logic for a method that gets all the content from the database
+  export const getDb = async () => {
+    const jateDB = await openDB("jate", 1);
+    const tx = jateDB.transaction("jate", "readonly");
+    const store = tx.objectStore("jate");
+    const request = store.getAll();
+    const result = await request;
+    console.log(result);
   };
-  
   
   initdb();
