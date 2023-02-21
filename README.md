@@ -1,7 +1,7 @@
 # PWA Just Another Text- Editor
 
 ## Description
- ### J.A.T.E was created as a simple text editor app that can function both online and offline, with a variety of data persistence options in order to ensure that data is not lost in any scenario. The application first looks to use the data in the indexedDB to populate the editor, then if it cannot access that it will use local storage. For use offline, this application can be downloaded to your desktop as an application. The application is a web text editor where the user can create notes or code snippets with or without an internet connection and where the user can reliably retrieve them for later use. The integrated service worker and Cache API's ensure that the application will remain fully functional even without and active internet connection. This application allows the user to access visited pages even if the application is offline.
+ ### This is the module challenge 19 given assignment. J.A.T.E was created as a simple text editor app that can function both online and offline, with a variety of data persistence options in order to ensure that data is not lost in any scenario. The application first looks to use the data in the indexedDB to populate the editor, then if it cannot access that it will use local storage. For use offline, this application can be downloaded to your desktop as an application. The application is a web text editor where the user can create notes or code snippets with or without an internet connection and where the user can reliably retrieve them for later use. The integrated service worker and Cache API's ensure that the application will remain fully functional even without and active internet connection. This application allows the user to access visited pages even if the application is offline.
 
 
  ### This is my GitHub Repository 
@@ -60,6 +60,14 @@ THEN I should have proper build scripts for a webpack application
 * npm install --save-dev webpack (Webpack)
 * npm install concurrently --save (run multiple commands concurrently.) (Concurrently)
 * npm npm install idb (IndexedDB)
+
+## Credits 
+* starter code
+* Tutor Jose Lopez
+* Instructor and TA's From Northwestern Boot Camp
+* [learnPWA](https://web.dev/learn/pwa/getting-started/)
+
+
 
 
 ## License
