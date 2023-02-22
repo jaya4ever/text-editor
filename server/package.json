@@ -1,7 +1,7 @@
 {
-    "name": "texteditor",
+    "name": "JATE",
     "version": "1.0.0",
-    "description": "just another text editor",
+    "description": "",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"

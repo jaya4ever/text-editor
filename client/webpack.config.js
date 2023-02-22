@@ -11,48 +11,38 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js',
-      //database: './src/js/database.js'
+      install: './src/js/install.js'
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Adding Webpack plugin to generate HTML and inject our bundles
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE'
+        title: 'Text Editor'
       }),
-      // TODO: Add and configure workbox plugins for a service worker and manifest file.
-      // service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // manifest.json
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'text-editor',
-        short_name: 'JATE',
-        description: 'Just Another Text Editor!',
-        background_color: '#225ca3',
-        theme_color: '#225ca3',
-        start_url: '/',
+        name: 'Text Editor',
         publicPath: '/',
+        start_url: '/',
+        fingerprints: false,
         icons: [
           {
-            src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512],
+            src: path.resolve('./src/images/logo.png'),
             destination: path.join('assets', 'icons'),
+            sizes: [96, 128, 192, 256, 384, 512]
           },
-        ],
+        ]
       }),
     ],
-
+    
+    // TODO: Add CSS loaders and babel to webpack.
     module: {
-      // TODO: Add CSS loaders and babel to webpack.
       rules: [
         {
           test: /\.css$/i,
@@ -65,7 +55,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime']
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           },
         },

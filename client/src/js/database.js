@@ -13,24 +13,26 @@ const initdb = async () =>
   });
 
   export const putDb = async (content) => {
-    const jateDB = await openDB("jate", 1);
-    const tx = jateDB.transaction("jate", "readwrite");
-    const store = tx.objectStore("jate");
-    const request = store.put({ jate: content });
+    console.log('PUT to the database');
+    const jate_db = await openDB('jate_db', 1);
+    const tx = jate_db.transaction('jate', 'readwrite');
+    const store = tx.objectStore('jate');
+    const request = store.put({ id: 1, jate: content });
     const result = await request;
-    console.log("Data saved to the database", result);
+    console.log('data saved to the database', result);
   };
   
   // TODO: Add logic for a method that gets all the content from the database
   export const getDb = async () => {
-    const jateDB = await openDB("jate", 1);
-    const tx = jateDB.transaction("jate", "readonly");
-    const store = tx.objectStore("jate");
-    const request = store.getAll();
-  // Get confirmation of the request.
-  const result = await request;
-  console.log('result.value', result);
-  return result;
+    console.log('GET from the database');
+    const jate_db = await openDB('jate_db', 1);
+    const tx = jate_db.transaction('jate', 'readonly');
+    const store = tx.objectStore('jate');
+    const request = store.get(1);
+    const result = await request;
+    console.log('result.jate', result);
+    
+    return result?.jate;
   };
   
   initdb();
